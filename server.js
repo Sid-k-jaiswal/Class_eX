@@ -110,6 +110,8 @@ app.post('/api/register', async (req, res) => {
 	res.json({ status: 'ok' })
 })
 
-app.listen(3000, () => {
+let port = process.env.PORT;
+
+app.listen(port || 3000,function(){
 	console.log('Server up at 3000')
-})
+});
